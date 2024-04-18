@@ -1,0 +1,48 @@
+.container {
+  background-color: white;
+  color: #2d313f;
+  border-radius: 15px;
+  padding: 20px 30px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0px;
+  @media (max-width: 420px) {
+    flex-direction: column;
+  }
+}
+
+.todoInput {
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ef7360;
+  border-radius: 8px;
+  margin-right: 20px;
+  &:focus {
+    border: 1px solid #ef7360;
+    outline: none;
+  }
+}
+
+.addButton {
+  background: #34b93d; /* green */
+  color: white; /* white text */
+  border: none; /* remove default button border */
+  padding: 10px 20px; /* add some padding */
+  text-align: center; /* center the text */
+  text-decoration: none; /* remove default button text decoration */
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer; /* change cursor to pointer when hovering over the button */
+  border-radius: 12px; /* rounded corners */
+  transition: background-color 0.3s ease; /* transition for hover effect */
+}
+
+.addButton:hover {
+  background-color: #0dce16; /* darken the background color when hovering over the button */
+}
