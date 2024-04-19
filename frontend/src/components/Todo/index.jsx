@@ -14,10 +14,14 @@ function Todo() {
   // Function to fetch todos from the server
   const fetchData = async () => {
     try {
+      //show loading message
+      document.querySelector(".loading").style.display = "block";
       // Sending a GET request to '/todos'
       const response = await axios.get("/todos");
       // Updating the todos state with the fetched todos
       setTodos(response.data);
+      //hide loading message
+      document.querySelector(".loading").style.display = "none";
     } catch (error) {
       // Logging any errors to the console
       console.log(error.message);
@@ -77,6 +81,7 @@ function Todo() {
         </button>
       </form>
       {/* Passing the todos and fetchData function as props to the TodoList component */}
+      <h3 className="loading">Loading...</h3>
       <TodoList todos={todos} fetchData={fetchData} />
     </div>
   );
