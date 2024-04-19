@@ -81,8 +81,9 @@ function Todo() {
         </button>
       </form>
       {/* Passing the todos and fetchData function as props to the TodoList component */}
-      <h3 className="loading">Loading...</h3>
+
       <TodoList todos={todos} fetchData={fetchData} />
+      <h3 className="loading">Loading...</h3>
     </div>
   );
 }
