@@ -14,9 +14,11 @@ function Todo() {
   // Function to fetch todos from the server
   const fetchData = async () => {
     try {
+      document.querySelector(".loading").style.display = "block";
       const response = await axios.get("/todos");
       // Updating the todos state with the fetched todos
       setTodos(response.data);
+      document.querySelector(".loading").style.display = "none";
     } catch (error) {
       // Logging any errors to the console
       console.log(error.message);
@@ -26,7 +28,6 @@ function Todo() {
   // useEffect hook to fetch todos when the component mounts
   useEffect(() => {
     fetchData();
-    document.querySelector(".loading").style.display = "none";
   }, []); // Empty dependency array means this effect will only run once, when the component mounts
 
   // Function to add a new todo
@@ -77,9 +78,7 @@ function Todo() {
         </button>
       </form>
       {/* Passing the todos and fetchData function as props to the TodoList component */}
-
       <TodoList todos={todos} fetchData={fetchData} />
-      <h3 className="loading">Loading...</h3>
     </div>
   );
 }

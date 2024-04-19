@@ -67,6 +67,7 @@ function TodoList({ todos, fetchData }) {
           </li>
         );
       })}
+      <h3 className="loading">Loading...</h3>
     </ul>
   );
 }
