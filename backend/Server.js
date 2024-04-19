@@ -21,6 +21,8 @@ app.use(express.json());
 // Middleware to enable CORS (Cross Origin Resource Sharing)
 app.use(cors());
 
+app.use(routes);
+
 // Connecting to MongoDB using mongoose
 mongoose.
     connect(process.env.MONGODB_URL)
