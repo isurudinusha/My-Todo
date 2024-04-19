@@ -9,5 +9,4 @@ const instance = axios.create({
     // baseURL: 'https://my-todo-yc2c.onrender.com'
 });
 
-// Exporting the instance to be used in other parts of the application
 export default instance;
