@@ -1,13 +1,16 @@
+/* Styling for unordered list */
 ul {
   padding: 20px;
   cursor: pointer;
 }
 
+/* Styling for todo container */
 .todoContainer {
   display: flex;
   align-items: center;
 }
 
+/* Styling for list items */
 li {
   display: flex;
   align-items: center;
@@ -16,11 +19,13 @@ li {
   font-size: 1rem;
 }
 
+/* Styling for todo text */
 .todoText {
   text-transform: capitalize;
   margin-left: 10px;
 }
 
+/* Styling for delete icon */
 .deleteIcon {
   background-color: #ff4d4d; /* red */
   color: white; /* white text */
@@ -35,20 +40,24 @@ li {
   border-radius: 12px; /* rounded corners */
 }
 
+/* Styling for delete icon on hover */
 .deleteIcon:hover {
   background-color: #fd0000; /* darken the background color when hovering over the button */
 }
 
+/* Styling for checkbox */
 .checkbox {
   cursor: pointer;
 }
 
+/* Styling for checkbox wrapper */
 .checkbox-wrapper-19 {
   box-sizing: border-box;
   --background-color: #fff;
   --checkbox-height: 25px;
 }
 
+/* Animation for checkbox */
 @-moz-keyframes dothabottomcheck-19 {
   0% {
     height: 0;

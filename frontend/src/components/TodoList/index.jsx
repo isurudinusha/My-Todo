@@ -1,27 +1,39 @@
+// Importing necessary styles and modules
 import "./styles.css";
 import axios from "../../axios";
 
+// TodoList component
 function TodoList({ todos, fetchData }) {
+  // Function to update a todo
   const updatedTodos = async (id) => {
     try {
+      // Sending a PUT request to '/update/:id'
       await axios.put(`/update/${id}`);
+      // Fetching the updated list of todos
       fetchData();
     } catch (error) {
+      // Logging any errors to the console
       console.log(error.message);
     }
   };
 
+  // Function to delete a todo
   const deleteTodo = async (id) => {
     try {
+      // Sending a DELETE request to '/delete/:id'
       await axios.delete(`/delete/${id}`);
+      // Fetching the updated list of todos
       fetchData();
     } catch (error) {
+      // Logging any errors to the console
       console.log(error.message);
     }
   };
 
+  // Rendering the component
   return (
     <ul>
+      {/* Mapping over the todos and rendering a list item for each one */}
       {todos?.map((todo) => {
         return (
           <li key={todo._id}>
@@ -31,6 +43,7 @@ function TodoList({ todos, fetchData }) {
                   type="checkbox"
                   id="cbtest-19"
                   checked={todo.completed}
+                  // Updating the todo when the checkbox is clicked
                   onChange={() => updatedTodos(todo._id)}
                 />
                 <label for="cbtest-19" class="check-box"></label>
@@ -41,6 +54,7 @@ function TodoList({ todos, fetchData }) {
                   color: todo.completed ? "red" : null,
                   textDecoration: todo.completed ? "line-through" : "none",
                 }}
+                // Updating the todo when the text is clicked
                 onClick={() => updatedTodos(todo._id)}
               >
                 {todo.text}
@@ -57,4 +71,5 @@ function TodoList({ todos, fetchData }) {
   );
 }
 
+// Exporting the TodoList component
 export default TodoList;

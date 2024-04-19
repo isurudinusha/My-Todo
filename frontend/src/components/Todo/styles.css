@@ -1,48 +1,57 @@
+/* Styling for the container */
 .container {
-  background-color: white;
-  color: #2d313f;
-  border-radius: 15px;
-  padding: 20px 30px;
+  background-color: white; /* white background */
+  color: #2d313f; /* dark text color */
+  border-radius: 15px; /* rounded corners */
+  padding: 20px 30px; /* padding around the content */
 }
 
+/* Styling for the form */
 form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 0px;
+  display: flex; /* use flexbox for layout */
+  align-items: center; /* center items vertically */
+  justify-content: center; /* center items horizontally */
+  padding: 5px 0px; /* padding at the top and bottom */
+
+  /* Media query for screens smaller than 420px */
   @media (max-width: 420px) {
-    flex-direction: column;
+    flex-direction: column; /* stack items vertically */
   }
 }
 
+/* Styling for the todo input field */
 .todoInput {
-  background-color: #f7f7f7;
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ef7360;
-  border-radius: 8px;
-  margin-right: 20px;
+  background-color: #f7f7f7; /* light gray background */
+  width: 100%; /* full width */
+  padding: 8px; /* padding around the text */
+  border: 1px solid #ef7360; /* orange border */
+  border-radius: 8px; /* slightly rounded corners */
+  margin-right: 20px; /* space to the right */
+
+  /* Styling for when the input field is focused */
   &:focus {
-    border: 1px solid #ef7360;
-    outline: none;
+    border: 1px solid #ef7360; /* keep the orange border */
+    outline: none; /* remove the default outline */
   }
 }
 
+/* Styling for the add button */
 .addButton {
-  background: #34b93d; /* green */
+  background: #34b93d; /* green background */
   color: white; /* white text */
-  border: none; /* remove default button border */
-  padding: 10px 20px; /* add some padding */
+  border: none; /* remove the default button border */
+  padding: 10px 20px; /* padding around the text */
   text-align: center; /* center the text */
-  text-decoration: none; /* remove default button text decoration */
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer; /* change cursor to pointer when hovering over the button */
-  border-radius: 12px; /* rounded corners */
-  transition: background-color 0.3s ease; /* transition for hover effect */
+  text-decoration: none; /* remove the default text decoration */
+  display: inline-block; /* allow the button to sit next to other elements */
+  font-size: 16px; /* text size */
+  margin: 4px 2px; /* space around the button */
+  cursor: pointer; /* change the cursor to a pointer when hovering over the button */
+  border-radius: 12px; /* very rounded corners */
+  transition: background-color 0.3s ease; /* smooth transition for the hover effect */
 }
 
+/* Styling for when the add button is hovered over */
 .addButton:hover {
-  background-color: #0dce16; /* darken the background color when hovering over the button */
+  background-color: #0dce16; /* darken the green background */
 }
