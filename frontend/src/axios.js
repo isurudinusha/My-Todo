@@ -4,7 +4,7 @@ import axios from 'axios';
 // Creating an instance of axios with custom configuration
 const instance = axios.create({
     // Setting the base URL for the HTTP requests
-    baseURL: 'https://mytodo.isurudinusha.me/todos'
+    baseURL: 'https://mytodo.isurudinusha.me'
     // For local development
     // http://localhost:5000
     // When deploying, use the following URL
