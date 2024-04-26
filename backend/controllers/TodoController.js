@@ -34,10 +34,11 @@ module.exports.createTodo = async (req, res) => {
 
 // Function to update a todo
 module.exports.updateTodo = async (req, res) => {
-    const { id: todoID, ...update } = req.body;
+    const { id } = req.params;
+    const update = { completed: true };
     try {
         // Updating the todo with the provided id and sending the updated todo as a response
-        const updateTodo = await Todo.findByIdAndUpdate(todoID, update);
+        const updateTodo = await Todo.findByIdAndUpdate(id, update);
         res.status(200).send(updateTodo);
     } catch (error) {
         // Sending an error message with status code 500 if something goes wrong
