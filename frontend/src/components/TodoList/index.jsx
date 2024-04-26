@@ -41,12 +41,12 @@ function TodoList({ todos, fetchData }) {
               <div class="checkbox-wrapper-19">
                 <input
                   type="checkbox"
-                  id="cbtest-19"
+                  id={`cbtest-${todo._id}`}
                   checked={todo.completed}
                   // Updating the todo when the checkbox is clicked
                   onChange={() => updatedTodos(todo._id)}
                 />
-                <label for="cbtest-19" class="check-box"></label>
+                <label for={`cbtest-${todo._id}`} class="check-box"></label>
               </div>
               <p
                 className="todoText"

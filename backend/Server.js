@@ -23,6 +23,10 @@ app.use(cors());
 
 app.use(routes);
 
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+
 // Connecting to MongoDB using mongoose
 mongoose.
     connect(process.env.MONGODB_URL)
